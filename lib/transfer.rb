@@ -12,5 +12,12 @@ class Transfer
     sender.valid? && receiver.valid?
   end
 
+  def execute_transaction
+    if sender.valid? && receiver.valid?
+      @status = 'complete'
+    else
+      @status = 'rejected'
+    end
+
 
 end
